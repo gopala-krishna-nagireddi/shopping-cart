@@ -1,0 +1,66 @@
+START
+
+# Initialize an empty shopping cart array
+cart = []
+
+# Function to add a product to the cart
+function addToCart(product):
+    if product.id exists in cart:
+        increment product.quantity
+    else:
+        add product to cart
+
+# Function to remove a product from the cart
+function removeFromCart(productId):
+    find product in cart based on productId
+    if product exists:
+        decrement product.quantity
+        if product.quantity is 0:
+            remove product from cart
+
+# Function to calculate the total price of the cart
+function calculateTotalPrice():
+    total = 0
+    for each product in cart:
+        total += product.price * product.quantity
+    return total
+
+# Function to calculate the average price of products in the cart
+function calculateAveragePrice():
+    total = calculateTotalPrice()
+    return total / total number of products in cart
+
+# Function to filter products above a certain price
+function filterProductsByPrice(maxPrice):
+    filteredCart = []
+    for each product in cart:
+        if product.price <= maxPrice:
+            add product to filteredCart
+    return filteredCart
+
+# Function to sort the cart based on price
+function sortCart(ascending):
+    if ascending:
+        sort cart in ascending order based on product.price
+    else:
+        sort cart in descending order based on product.price
+
+# Function to clear the cart
+function clearCart():
+    set cart to an empty array
+    display "Your cart is empty"
+
+# Dummy data for better understanding
+dummyProduct1 = {id: 1, name: "chair 1", image: "urlA", price: 25, quantity: 1}
+dummyProduct2 = {id: 2, name: "chair 2", image: "urlB", price: 35, quantity: 2}
+
+# Testing the functions
+addToCart(dummyProduct1)
+addToCart(dummyProduct2)
+removeFromCart(1)
+totalPrice = calculateTotalPrice()
+averagePrice = calculateAveragePrice()
+filteredProducts = filterProductsByPrice(30)
+sortCart(true)
+clearCart()
+END

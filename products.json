@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "image": "images/Image (1).png",
+            "name":"Chair 1",
+            "price": 10
+        },
+        {
+            "id": 2,
+            "image": "images/Image (2).png",
+            "name":"Chair 2",
+            "price": 40
+        },
+        {
+            "id": 3,
+            "image": "images/Image (3).png",
+            "name":"Chair 3",
+            "price": 30
+        },
+        {
+            "id": 4,
+            "image": "images/Image (4).png",
+            "name":"Chair 4",
+            "price": 35
+        },
+        {
+            "id": 5,
+            "image": "images/Image (5).png",
+            "name":"Chair 5",
+            "price": 24
+        },
+        {
+            "id": 6,
+            "image": "images/Image (6).png",
+            "name":"Chair 6",
+            "price":28
+        },
+        {
+            "id": 7,
+            "image": "images/Image (7).png",
+            "name":"Chair 7",
+            "price":32
+        }
+    ]
+}
