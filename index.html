@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
-</head>
-<body>
-    <div class="home-page-container">
-        <div class="filters-container">
-            <input class="price-input" type="number" placeholder="Enter a Price" />
+  </head>
+  <body>
+    <div class="products-cart-container">
+      <div class="products-container">
+        <h1 class="heading">Our Products</h1>
+        <ul class="products-list list"></ul>
+      </div>
+      <div class="cart-container">
+        <h1 class="heading">Cart</h1>
 
+        <div class="input-sorting-container">
+          <input
+            class="price-input"
+            type="number"
+            placeholder="Enter a Price"
+          />
+          <div>
+            <label for="sorting">Price:</label>
+            <select id="sorting" class="sorting">
+              <option value="ascending">Low-High</option>
+              <option value="descending">High-Low</option>
+            </select>
+            <button class="clear-cart">Clear Cart X</button>
+          </div>
         </div>
-        <div class="products-cart-container">
-            <h1>Our Products</h1>
-            <div class="products-container">
-                <ul class="products-list"></ul>
-            </div>
-            <div>
-                <h1>Cart</h1>
-                <div class="cart-container">
-                    <ul class="cart-list"></ul>
-                </div>
-            </div>
-            <div class="summary-container">
-                <div class="price-details-container">
-                    <p>Avg Product Price:</p>
-                    <p class="avg-price"></p>
-                </div>
-                <div class="price-details-container">
-                    <p>Total Price:</p>
-                    <p class="total-price"></p>
-                </div>
-            </div>
+        <ul class="cart-list list"></ul>
+        <h1 class="heading">Cart Summary</h1>
+        <div class="cart-avg-container">
+          <p class="pricing">Average Price:</p>
+          <p class="avg-total-price cart-avg"></p>
         </div>
-
+        <hr class="hr-line" />
+        <div class="cart-total-container">
+          <p class="pricing">Total Cart Price:</p>
+          <p class="avg-total-price cart-total"></p>
+        </div>
+      </div>
     </div>
-    <script type="text/javascript" src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
