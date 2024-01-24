@@ -166,7 +166,8 @@ function displayProducts(productsList) {
 }
 
 function fetchProducts() {
-  fetch("/products.json")
+  try {
+    fetch("/products.json")
     .then(function (response) {
       return response.json();
     })
@@ -174,7 +175,9 @@ function fetchProducts() {
       const { products } = jsondata;
       displayProducts(products);
     });
-}
+}catch(e){
+    console.log(e)
+  }
 
 fetchProducts();
 updateCart();
